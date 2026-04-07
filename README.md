@@ -18,7 +18,7 @@ A GitHub Actions workflow (`.github/workflows/docker-build.yml`) automatically b
 
 The image is published at:
 ```
-ghcr.io/<owner>/ckb-nginx-proxy:latest
+ghcr.io/nervosnetwork/ckb-nginx-proxy:latest
 ```
 
 Forks automatically get their own GHCR image — no extra configuration is needed in the workflow.
@@ -33,18 +33,6 @@ Docker Compose v2 is bundled with modern Docker Engine (no separate install need
 ```
 git clone https://github.com/nervosnetwork/ckb-nginx-proxy.git
 ```
-
-## Configure the Docker image name
-
-Copy the example environment file and edit it to match your repository:
-```
-cp .env.example .env
-# Edit .env and set GITHUB_REPOSITORY to your repo, e.g.:
-# GITHUB_REPOSITORY=nervosnetwork/ckb-nginx-proxy
-```
-
-Docker Compose reads `GITHUB_REPOSITORY` from `.env` and constructs the image name
-`ghcr.io/${GITHUB_REPOSITORY}:latest` automatically.
 
 ## Replace the default value with your CKB RPC address
 
@@ -111,4 +99,3 @@ result
 ```
 This method Access forbidden
 ```
-
