@@ -1,7 +1,7 @@
-FROM fabiocicerchia/nginx-lua:1.27.4-alpine3.21.3
+FROM fabiocicerchia/nginx-lua:1.31.9-alpine3.24.4
 
 LABEL description="CKB nginx reverse proxy with Lua-based RPC method filtering" \
-      version="1.27.4"
+      version="1.31.9"
 
 RUN apk add --no-cache coreutils \
     && apk add --no-cache --virtual .build-deps \
